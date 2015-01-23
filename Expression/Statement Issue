@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+
+{
+    int score = 1000;
+    if (score)
+        cout << "Score isn't an expression. It's a statement.";
+        return 0;
+
+}
