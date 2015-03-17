@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+void gci (int m, int n) // Declare two integers.
+{
+    int r; // Declare a new integer.
+    r = m%n; // r is the remainder of the division of m and n.
+    if (r == 0 && r <= n) {
+        cout << "The greatest positive integer is: " << n << endl;
+    }
+    else {
+        m = n;
+        n = r;
+        gci (m, n);
+    }
+}
+
+int main ()
+
+{
+    cout << "This program finds the greatest common integer of the numbers you will enter: " << endl;
+    int a, b = 0;
+    cout << "Please enter your first number and press ENTER: " << endl;
+    cin >> a;
+    cout << "Please enter your second number and press ENTER: " << endl;
+    cin >> b;
+    if (a >= b) {
+        gci (a, b);
+    }
+    else {
+        gci (b, a);
+    }
+    return 0;
+}
+
+
